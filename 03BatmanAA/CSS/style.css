@@ -1,0 +1,167 @@
+* {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+
+body{
+    background-color: #241007;
+}
+
+nav {
+    height: 120px;
+    background-image: url(../bimg/ban.jpg);
+    display: flex;   
+    flex-direction: row;   
+    align-items: center; 
+    justify-content: space-around;
+    
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    
+}
+
+nav a:hover{    
+    color: #ff2a00;    
+}
+
+.bInicio {
+    background-image: url(../bimg/inicio.png);
+    background-position: center;
+    background-size: cover;
+    height: 100vh; 
+    text-align: center;
+}
+
+.bSinopsis {
+    background-image: url(../bimg/sinopsis.png);
+    background-position: center;
+    background-size: cover;
+    height: 100vh; 
+    display: flex;
+    align-items: center;
+}
+
+.TablaSinopsis {
+    background-color: #9E875D;
+    border-radius: 6px;
+    box-shadow: 1px 1px 5px #000;
+    width: 30%;
+    float: right;
+    margin: 50px 20px 20px 20px;
+    padding: 30px;
+}
+
+.imag{
+    text-align: center;
+}
+
+.imag img {
+    width: 250px;
+    height: auto;
+    display: block;
+    margin: 0 auto; 
+}
+
+.TablaSinopsis h3, .TablaSinopsis p {
+    display: inline;
+}
+
+.texto1 {
+    width: 60%;
+    padding: 30px;
+    color: white;
+} 
+
+.texto1 p{
+    font-size: 20px;
+    text-align: justify;
+}
+
+.texto1 h2 {
+    text-align: center;
+}
+
+.bHistoria {
+    background-image: url(../bimg/historia.png);
+    background-position: center center;
+    background-size: cover;
+    height: 250vh; 
+}
+
+.texto2 {
+    width: 10px 10px 10px 10px;
+    padding: 30px;
+    color: white;
+} 
+
+.texto2 p, .texto2 h3{ 
+    text-align: justify;
+}
+
+.texto2 h2 {
+    text-align: center;
+}
+
+.bModoJuego {
+    background-image: url(../bimg/2.png);
+    background-position: center center;
+    background-size: cover;
+    height: 160vh; 
+}
+
+.texto3 {
+    width: 10px 10px 10px 10px;
+    padding: 30px;
+    color: white;
+} 
+
+.texto3 p, .texto3 h3{
+    text-align: justify;
+
+}
+
+.texto3 h2 {
+    text-align: center;
+}
+
+.bPersonajes {
+    background-image: url(../bimg/1.png);
+    background-position: center center;
+    background-size: cover;
+    height: 100vh; 
+    text-align: justify;
+}
+
+.texto4 {
+    width: 10px 10px 10px 10px;
+    padding: 30px;
+    color: white;
+} 
+
+.texto4 p, .texto4 h3{
+    text-align: justify;
+
+}
+
+.texto4 h2 {
+    text-align: center;
+}
+
+.footer{
+    background-color: black;
+}
+
+footer p{
+    font-size: 20px;
+}
+
+.redes{
+    display: flex;
+    justify-content: space-around;
+}
+.redes img:hover{
+    filter: opacity(.5);
+}
