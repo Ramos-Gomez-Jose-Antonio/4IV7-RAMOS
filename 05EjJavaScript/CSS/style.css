@@ -37,7 +37,7 @@ ul li a:hover{
 }
 
 .tamaño {
-    height: 50vh;
+    height: 30vh;
 }
 
 footer {
@@ -47,6 +47,7 @@ footer {
     align-items: center;
     justify-content: center;
     background-color: #331D10;
+    margin-bottom: 50px;
     
 }
 
@@ -56,4 +57,37 @@ footer h2 {
 
 a{
     text-decoration: none;
+}
+
+input[type="number"],
+input[type="submit"],
+input[type="reset"] {
+    background-color: #ffffff; 
+    border: 2px solid #eca90c; 
+    border-radius: 5px; 
+    padding: 10px; 
+    margin-bottom: 10px; 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 16px;
+    color: #333333; 
+}
+
+input[type="number"]:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus {
+    outline: none;
+    border-color: #f2f6e1; 
+    box-shadow: 0 0 5px rgba(236, 169, 12, 0.5); 
+}
+
+input[type="submit"],
+input[type="reset"] {
+    border: 2px solid #6e630b;
+    background-color: #eca90c; 
+    color: #ffffff; 
+}
+
+
+input[type="reset"] {
+    margin-right: 10px;
 }

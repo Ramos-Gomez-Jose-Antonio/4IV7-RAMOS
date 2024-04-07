@@ -14,6 +14,15 @@
         <h2>Descripcion</h2>
         <p>Suponga que un individuo desea invertir su capital en un banco y desea saber cuanto dinero ganará despues de un mes si el banco paga a razón de 2% mensual.</p>
     </div>
+    <form method="post" name="formulario" action="" onsubmit="return validar(this)">
+        <label>Ingrese el capital Inicial: </label>
+        <br>
+        <input type="number" name="capital" id="capital">
+        <br>
+        <input type="submit" name="enviar" value="Enviar Registro">
+        <input type="reset" name="borrar" value="Borrar Datos">
+        
+    </form>
 
     <h2>Resultado</h2>
     <div id="resultado" class="tamaño"></div>

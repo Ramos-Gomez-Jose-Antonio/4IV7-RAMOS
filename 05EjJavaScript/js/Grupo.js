@@ -1,34 +1,17 @@
-document.addEventListener("DOMContentLoaded", function() {
-    var totalEstudiantes, hombres, mujeres;
+function validar(formulario) {
 
-    // Solicitar que ingrese el número total de estudiantes
-    while (true) {
-        totalEstudiantes = parseInt(prompt("Ingrese el número total de estudiantes en el grupo:"));
-        if (!isNaN(totalEstudiantes) && totalEstudiantes >= 0) {
-            break; 
-        }
-        alert("Por favor, ingrese un número válido mayor o igual a cero.");
-    }
+    var totalEstudiantes = parseInt(formulario.total.value);
+    var hombres = parseInt(formulario.hombres.value);
 
-    // Solicitar que ingrese la cantidad de hombres
-    while (true) {
-        hombres = parseInt(prompt("Ingrese la cantidad de hombres en el grupo:"));
-        if (!isNaN(hombres) && hombres >= 0 && hombres <= totalEstudiantes) {
-            break; 
-        }
-        alert("Por favor, ingrese un número válido mayor o igual a cero y que no supere el total de estudiantes.");
-    }
+    var mujeres = totalEstudiantes - hombres;
 
-    // Calcular la cantidad de mujeres restando la cantidad de hombres al total de estudiantes
-    mujeres = totalEstudiantes - hombres;
-
-    // Calcular el porcentaje de hombres y mujeres
     var porcentajeHombres = (hombres / totalEstudiantes) * 100;
     var porcentajeMujeres = (mujeres / totalEstudiantes) * 100;
 
-    // Mostrar el resultado
-    var resultado = "Porcentaje de hombres en el grupo: " + porcentajeHombres.toFixed(2) + "%<br>";
-    resultado += "Porcentaje de mujeres en el grupo: " + porcentajeMujeres.toFixed(2) + "%<br>";
+    var resultadoHTML = "<p>Porcentaje de hombres en el grupo: " + porcentajeHombres.toFixed(2) + "%</p>";
+    resultadoHTML += "<p>Porcentaje de mujeres en el grupo: " + porcentajeMujeres.toFixed(2) + "%</p>";
 
-    document.getElementById("resultado").innerHTML = resultado;
-});
+    document.getElementById("resultado").innerHTML = resultadoHTML;
+
+    return false;
+}

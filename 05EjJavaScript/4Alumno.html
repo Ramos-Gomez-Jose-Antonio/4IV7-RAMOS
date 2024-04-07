@@ -19,6 +19,32 @@
             <li>15% de la calificación de un trabajo final</li>
           </ul>
     </div>
+
+    <form method="post" name="formulario" action="" onsubmit="return validar(this)">
+        <label>Ingrese la calificación del Primer Parcial: </label>
+        <br>
+        <input type="number" name="parcial1" id="parcial1">
+        <br>
+        <label>Ingrese la calificación del Segundo Parcial: </label>
+        <br>
+        <input type="number" name="parcial2" id="parcial2">
+        <br>
+        <label>Ingrese la calificación del Tercer Parcial: </label>
+        <br>
+        <input type="number" name="parcial3" id="parcial3">
+        <br>
+        <label>Ingrese la calificación del Examen Final: </label>
+        <br>
+        <input type="number" name="examenFinal" id="examenFinal">
+        <br>
+        <label>Ingrese la calificación del Trabajo Final </label>
+        <br>
+        <input type="number" name="trabajoFinal" id="trabajoFinal">
+        <br>
+        <input type="submit" name="enviar" value="Enviar Registro">
+        <input type="reset" name="borrar" value="Borrar Datos">
+        
+    </form>
     
     <h2>Resultado</h2>
     <div id="resultado" class="tamaño"></div>

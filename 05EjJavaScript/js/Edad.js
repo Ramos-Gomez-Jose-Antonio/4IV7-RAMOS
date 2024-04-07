@@ -1,69 +1,27 @@
-document.addEventListener("DOMContentLoaded", function() {
+function validar(formulario) {
 
-    var diaNacimiento;
-    while (true) {
-        diaNacimiento = parseInt(prompt("Ingrese el día de su fecha de nacimiento (en número):"));
-        if (!isNaN(diaNacimiento) && Number.isInteger(diaNacimiento)) {
-            break;
-        }
-        alert("Por favor, ingrese un número entero válido para el día.");
-    }
+    var diaNacimiento = parseInt(formulario.dianacimiento.value);
+    var mesNacimiento = parseInt(formulario.mesnacimiento.value);
+    var añoNacimiento = parseInt(formulario.añonacimiento.value);
+    var diaActual = parseInt(formulario.dia.value);
+    var mesActual = parseInt(formulario.mes.value);
+    var añoActual = parseInt(formulario.año.value);
 
-    var mesNacimiento;
-    while (true) {
-        mesNacimiento = parseInt(prompt("Ingrese el mes de su fecha de nacimiento (en número):"));
-        if (!isNaN(mesNacimiento) && Number.isInteger(mesNacimiento)) {
-            break;
-        }
-        alert("Por favor, ingrese un número entero válido para el mes.");
-    }
-
-    var añoNacimiento;
-    while (true) {
-        añoNacimiento = parseInt(prompt("Ingrese el año de su fecha de nacimiento (en número y formato YYYY):"));
-        if (!isNaN(añoNacimiento) && Number.isInteger(añoNacimiento)) {
-            break;
-        }
-        alert("Por favor, ingrese un número entero válido para el año.");
-    }
-
-    var diaActual;
-    while (true) {
-        diaActual = parseInt(prompt("Ingrese el día actual (en número):"));
-        if (!isNaN(diaActual) && Number.isInteger(diaActual)) {
-            break;
-        }
-        alert("Por favor, ingrese un número entero válido para el día actual.");
-    }
-
-    var mesActual;
-    while (true) {
-        mesActual = parseInt(prompt("Ingrese el mes actual (en número):"));
-        if (!isNaN(mesActual) && Number.isInteger(mesActual)) {
-            break;
-        }
-        alert("Por favor, ingrese un número entero válido para el mes actual.");
-    }
-
-    var añoActual;
-    while (true) {
-        añoActual = parseInt(prompt("Ingrese el año actual (en número y formato YYYY):"));
-        if (!isNaN(añoActual) && Number.isInteger(añoActual)) {
-            break;
-        }
-        alert("Por favor, ingrese un número entero válido para el año actual.");
+    if (isNaN(diaNacimiento) || isNaN(mesNacimiento) || isNaN(añoNacimiento) ||
+        isNaN(diaActual) || isNaN(mesActual) || isNaN(añoActual) ||
+        diaNacimiento <= 0 || mesNacimiento <= 0 || añoNacimiento <= 0 ||
+        diaActual <= 0 || mesActual <= 0 || añoActual <= 0) {
+        alert("Por favor, ingrese valores válidos en todos los campos.");
+        return false; 
     }
 
     var edad = añoActual - añoNacimiento;
-
-    // Verificar si la fecha de nacimiento aún no ha ocurrido este año
-    if (mesNacimiento > mesActual || (mesNacimiento === mesActual && diaNacimiento > diaActual)) {
-        edad--;
+    if (mesActual < mesNacimiento || (mesActual === mesNacimiento && diaActual < diaNacimiento)) {
+        edad--; // Ajustar la edad si aún no ha cumplido años este año
     }
 
-    // Mostrar el resultado
-    var resultado = "\nSu edad es: " + edad + " años.";
+    var resultadoHTML = "<p>Su edad es: " + edad + " años.</p>";
+    document.getElementById("resultado").innerHTML = resultadoHTML;
 
-    // Insertar el resultado
-    document.getElementById("resultado").innerHTML = resultado;
-});
+    return false; 
+}

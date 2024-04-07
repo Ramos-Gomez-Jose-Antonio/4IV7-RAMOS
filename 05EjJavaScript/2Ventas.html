@@ -14,6 +14,27 @@
         <h2>Descripcion</h2>
         <p>Un vendedor recibe un sueldo base mas un 10% extra por comisión de sus ventas, el vendedor desea saber cuanto dinero obtendrá por concepto de comisiones por las tres ventas que realiza en el mes y el total que recibirá en el mes tomando en cuenta su sueldo base y comisiones.</p>
     </div>
+    <form method="post" name="formulario" action="" onsubmit="return validar(this)">
+        <label>Ingrese su sueldo base: </label>
+        <br>
+        <input type="number" name="sueldo" id="sueldo">
+        <br>
+        <label>Ingrese el monto de la primera venta: </label>
+        <br>
+        <input type="number" name="venta1" id="venta1">
+        <br>
+        <label>Ingrese el monto de la segunda venta: </label>
+        <br>
+        <input type="number" name="venta2" id="venta2">
+        <br>
+        <label>Ingrese el monto de la tercera venta: </label>
+        <br>
+        <input type="number" name="venta3" id="venta3">
+        <br>
+        <input type="submit" name="enviar" value="Enviar Registro">
+        <input type="reset" name="borrar" value="Borrar Datos">
+        
+    </form>
     
     <h2>Resultado</h2>
     <div id="resultado" class="tamaño"></div>

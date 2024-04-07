@@ -15,6 +15,36 @@
         <p>Realizar un algoritmo que calcule la edad de una persona.</p>
     </div>
 
+    <form method="post" name="formulario" action="" onsubmit="return validar(this)">
+        <label>Ingrese el día de su fecha de nacimiento (en número): </label>
+        <br>
+        <input type="number" name="dianacimiento" id="dianacimiento">
+        <br>
+        <label>Ingrese el mes de su fecha de nacimiento (en número): </label>
+        <br>
+        <input type="number" name="mesnacimiento" id="mesnacimiento">
+        <br>
+        <label>Ingrese el año de su fecha de nacimiento (en número y formato YYYY): </label>
+        <br>
+        <input type="number" name="añonacimiento" id="añonacimiento">
+        <br>
+        <label>Ingrese el día actual (en número): </label>
+        <br>
+        <input type="number" name="dia" id="dia">
+        <br>
+        <label>Ingrese el mes actual (en número): </label>
+        <br>
+        <input type="number" name="mes" id="mes">
+        <br>
+        <label>Ingrese el año actual (en número y formato YYYY): </label>
+        <br>
+        <input type="number" name="año" id="año">
+        <br>
+        <input type="submit" name="enviar" value="Enviar Registro">
+        <input type="reset" name="borrar" value="Borrar Datos">
+        
+    </form>
+
     <h2>Resultado</h2>
     <div id="resultado" class="tamaño"></div>
 

@@ -1,22 +1,20 @@
-document.addEventListener("DOMContentLoaded", function() {
-    var capitalInicial;
-    // Solicitar que se ingrese el capital inicial
-    while (true) {
-        var msj = prompt("Ingrese el capital inicial:");
-        // Intentar convertir la entrada a un número decimal
-        capitalInicial = parseFloat(msj);
-        if (!isNaN(capitalInicial)) {
-            break; 
-        }
-        // Si no es válido, mostrar un mensaje de error y continuar pidiendo la entrada
-        alert("Por favor, ingrese un número válido.");
+function validar(formulario) {
+    var capitalInicial = parseFloat(formulario.capital.value);
+    
+    if (isNaN(capitalInicial) || capitalInicial <= 0) {
+        alert("Por favor, ingrese un capital inicial válido.");
+        return false; // Detener el envío del formulario si el capital inicial es inválido
     }
-
-    // Calculando el dinero ganado después de un mes con un interés del 2%
+    
+    // Calculamos el dinero ganado después de un mes con un interés del 2%
     var interes = capitalInicial * 0.02; 
     var capitalFinal = capitalInicial + interes;
-    // Damos el resultado
-    var mensaje = "Después de un mes, su capital inicial de $" + capitalInicial.toFixed(2) + " habrá aumentado un $" + interes.toFixed(2) + ".\nSu capital final será de $" + capitalFinal.toFixed(2);
-    // Imprimimos el resultado 
-    document.getElementById("resultado").innerText = mensaje;
-});
+    
+    // Mostrar el resultado en el HTML
+    var resultadoHTML = "<p>Después de un mes, su capital inicial de $" + capitalInicial.toFixed(2) + " habrá aumentado en $" + interes.toFixed(2) + ".<br>Su capital final será de $" + capitalFinal.toFixed(2) + ".</p>";
+    
+    // Insertar el resultado en el div con id "resultado"
+    document.getElementById("resultado").innerHTML = resultadoHTML;
+    
+    return false; // Evitar que el formulario se envíe y recargue la página
+}

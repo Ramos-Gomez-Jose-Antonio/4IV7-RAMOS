@@ -14,6 +14,20 @@
         <h2>Descripcion</h2>
         <p>Un maestro desea saber que porcentaje de hombres y que porcentaje de mujeres hay en un grupo de estudiantes.</p>
     </div>
+
+    <form method="post" name="formulario" action="" onsubmit="return validar(this)">
+        <label>Ingrese la cantidad total de Estudiantes en el Grupo: </label>
+        <br>
+        <input type="number" name="total" id="total">
+        <br>
+        <label>Ingrese el numero total de Hombres en el Grupo</label>
+        <br>
+        <input type="number" name="hombres" id="hombres">
+        <br>
+        <input type="submit" name="enviar" value="Enviar Registro">
+        <input type="reset" name="borrar" value="Borrar Datos">
+        
+    </form>
     
     <h2>Resultado</h2>
     <div id="resultado" class="tamaño"></div>
