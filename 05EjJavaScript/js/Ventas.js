@@ -15,7 +15,7 @@ function validar(formulario) {
 
     var totalMes = sueldoBase + comision;
 
-    var resultadoHTML = "<p>El vendedor recibirá $" + comision.toFixed(2) + " por concepto de comisiones por las tres ventas realizadas en el mes.</p>";
+    var resultadoHTML = "<p>El vendedor recibirá $" + comision.toFixed(2) + " de comisiones por las tres ventas realizadas en el mes.</p>";
     resultadoHTML += "<p>El total que recibirá en el mes, tomando en cuenta su sueldo base y comisiones, será de $" + totalMes.toFixed(2) + ".</p>";
 
     document.getElementById("resultado").innerHTML = resultadoHTML;
