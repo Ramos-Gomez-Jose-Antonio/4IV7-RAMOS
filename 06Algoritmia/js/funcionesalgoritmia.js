@@ -1,8 +1,14 @@
 function problema1() {
     var p1_input = document.querySelector('#p1-input').value.trim();
     
+    // Verificar si el input está vacío
     if (p1_input === '') {
         document.querySelector('#p1-output').textContent = 'Por favor, ingresa algunas palabras.';
+        return;
+    }
+    
+    if (/[0-9]/.test(p1_input)) {
+        alert('Por favor, ingresa solo letras en el campo.');
         return;
     }
     
@@ -61,6 +67,11 @@ function problema3() {
         document.querySelector('#p3-output').textContent = 'Por favor, ingresa algunas palabras.';
         return;
     }
+    
+    if (/[0-9]/.test(p3_input)) {
+        alert('Por favor, ingresa solo letras en el campo.');
+        return;
+    }
 
     var palabras = p3_input.split(',');
     var maxCaracteresUnicos = 0;
@@ -69,11 +80,11 @@ function problema3() {
 
     for (var i = 0; i < palabras.length; i++) {
         var palabra = palabras[i].toUpperCase();
-        var caracteresUnicos = [...new Set(palabra)].length; // Longitud del conjunto de caracteres únicos
+        var caracteresUnicos = [...new Set(palabra)].length; 
         if (caracteresUnicos > maxCaracteresUnicos) {
             maxCaracteresUnicos = caracteresUnicos;
             palabraMaxCaracteresUnicos = palabra;
-            caracteresUnicosPalabraMax = [...new Set(palabra)].join(', '); // Caracteres únicos separados por comas
+            caracteresUnicosPalabraMax = [...new Set(palabra)].join(', ');
         }
     }
 
