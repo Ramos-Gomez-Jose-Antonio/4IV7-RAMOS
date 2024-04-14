@@ -10,7 +10,7 @@ html {
 }
 
 .banner {
-    background: linear-gradient(to right, #b0e42c, #85d3ba);
+    background: linear-gradient(to right, #8ee42cdb, #85d3ba);
     background-position: center center;
     background-size: cover;
     height: auto;
@@ -22,7 +22,7 @@ nav {
     background-image: linear-gradient(
         0deg,
         rgba(221, 31, 31, 0.822),
-        rgba(245, 171, 86, 0.5)
+        rgba(245, 219, 86, 0.522)
     );
     display: flex;
     flex-direction: row;
@@ -70,7 +70,7 @@ nav a:hover {
 }
 
 .personal-info {
-    background: linear-gradient(to right, #1fe582, #95a2e1);
+    background: linear-gradient(to right, #1fe5c4d0, #4063d5);
     height: auto;
     padding: 50px 0; 
 }
