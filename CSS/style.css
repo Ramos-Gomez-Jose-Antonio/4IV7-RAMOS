@@ -10,7 +10,7 @@ html {
 }
 
 .banner {
-    background: linear-gradient(to right, #64e912ae, #1fe5c4d0);
+    background: linear-gradient(to bottom, #64e912ae, #1fe5c4d0);
     background-position: center center;
     background-size: cover;
     height: auto;
@@ -70,7 +70,7 @@ nav a:hover {
 }
 
 .personal-info {
-    background: linear-gradient(to right, #1fe5c4d0, #4063d5);
+    background: linear-gradient(to bottom, #1fe5c4d0, #4063d5);
     height: auto;
     padding: 50px 0; 
 }
@@ -101,7 +101,7 @@ nav a:hover {
 }
 
 .PNT {
-    background: linear-gradient(to right, #4063d5, #b60de9e4);
+    background: linear-gradient(to bottom, #4063d5, #b60de9e4);
     padding: 50px 0; 
     text-align: center;
 }
@@ -169,4 +169,27 @@ footer p {
 
 .redes img:hover {
     filter: opacity(0.5);
+}
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+}
+
+.personal-info-container {
+    background-color: #e3d7ff;
+    padding: 20px; 
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    max-width: 600px; 
+    margin: 0 auto; 
+    text-align: center; 
+}
+
+.pic img {
+    max-width: 200px;
+    display: block; 
+    margin: 0 auto; 
 }
