@@ -1,10 +1,8 @@
-
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Roboto, sans-serif;
-
 }
 
 html{
@@ -28,14 +26,12 @@ nav {
     display: flex;   
     flex-direction: row;   
     align-items: center; 
-    justify-content: space-around;
-    
+    justify-content: space-around;    
 }
 
 nav a {
     text-decoration: none;
-    color: white;
-    
+    color: white;    
 }
 
 nav a:hover{    
@@ -62,7 +58,6 @@ nav a:hover{
     flex-direction: column;
     text-align: center;
     color: white;
-
 }
 
 .PNT {
@@ -97,6 +92,9 @@ img{
 
 .footer{
     background-color: black;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
 }
 
 footer p{
@@ -107,6 +105,7 @@ footer p{
     display: flex;
     justify-content: space-around;
 }
+
 .redes img:hover{
     filter: opacity(.5);
 }
@@ -151,6 +150,3 @@ footer p{
     font-size: 18px;
     margin-bottom: 10px;
 }
-
-
-
