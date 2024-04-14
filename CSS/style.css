@@ -10,7 +10,7 @@ html {
 }
 
 .banner {
-    background: linear-gradient(to right, #3ee157, #85d3ba);
+    background: linear-gradient(to right, #b0e42c, #85d3ba);
     background-position: center center;
     background-size: cover;
     height: auto;
@@ -21,8 +21,8 @@ nav {
     height: 120px;
     background-image: linear-gradient(
         0deg,
-        rgba(218, 94, 94, 0.808),
-        rgba(243, 75, 45, 0.5)
+        rgba(221, 31, 31, 0.822),
+        rgba(245, 171, 86, 0.5)
     );
     display: flex;
     flex-direction: row;
@@ -36,7 +36,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #ff2a00;
+    color: #ff0000e5;
 }
 
 .banner h1 {
@@ -70,7 +70,7 @@ nav a:hover {
 }
 
 .personal-info {
-    background: linear-gradient(to right, #a31fe5, #de95e1);
+    background: linear-gradient(to right, #1fe582, #95a2e1);
     height: auto;
     padding: 50px 0; 
 }
@@ -101,7 +101,7 @@ nav a:hover {
 }
 
 .PNT {
-    background: linear-gradient(to right, #4b49e7, #c9eef5);
+    background: linear-gradient(to right, #496be7, #f4c9f5);
     padding: 50px 0; 
     text-align: center;
 }
